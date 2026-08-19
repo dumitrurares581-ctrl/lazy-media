@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>LAZY MEDIA | Work</title>
+<title>LAZY MEDIA | My Work</title>
 <meta name="description" content="Lazy Media — cinematic photo &amp; video production studio. Selected work in narrative, commercial and documentary film.">
 <link rel="icon" href="images/logo.png">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -60,7 +60,7 @@
 <nav class="hidden md:flex fixed top-0 w-full z-50 bg-background/50 backdrop-blur-xl border-b border-white/10 justify-between items-center h-20 px-margin-desktop ease-out duration-300">
   <a class="font-display-lg-mobile text-display-lg-mobile tracking-tighter text-primary" href="index.html">LAZY MEDIA</a>
   <div class="flex items-center gap-8">
-    <a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-primary transition-colors duration-300" href="index.html">Work</a>
+    <a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-primary transition-colors duration-300" href="index.html">My Work</a>
     <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="about.html">Contact</a>
   </div>
 </nav>
@@ -74,23 +74,30 @@
   <div class="w-10 h-10"></div>
 </header>
 <div id="mobile-menu" class="md:hidden fixed top-20 left-0 w-full z-40 bg-background/95 backdrop-blur-md border-b border-white/10 flex flex-col px-margin-mobile py-6 gap-4 opacity-0 -translate-y-2 pointer-events-none">
-  <a class="font-label-caps text-label-caps text-primary" href="index.html">WORK</a>
+  <a class="font-label-caps text-label-caps text-primary" href="index.html">MY WORK</a>
   <a class="font-label-caps text-label-caps text-on-surface-variant" href="about.html">CONTACT</a>
 </div>
 
 <!-- Desktop main -->
 <main class="hidden md:block pt-32 px-margin-desktop max-w-[1920px] mx-auto mb-24">
   <header class="mb-24 text-center">
-    <h1 class="font-headline-md text-headline-md font-bold mb-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">Our Work</h1>
+    <h1 class="font-headline-md text-headline-md font-bold mb-4 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">My Work</h1>
     <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl opacity-0 animate-[fadeIn_1s_ease-out_0.3s_forwards] mx-auto">A collection of cinematic explorations focusing on narrative and visual depth.</p>
   </header>
-  <div class="grid grid-cols-1 gap-gutter md:grid-cols-2">
+  <div class="grid grid-cols-1 gap-gutter md:grid-cols-2 max-w-5xl mx-auto">
     <article class="project-card opacity-0 animate-[fadeInUp_1s_ease-out_0.5s_forwards] cursor-pointer md:mt-12">
-      <div class="project-image-wrapper"><img alt="Blue Hour Narrative" src="images/blue-hour.jpg"></div>
+      <div class="relative w-full aspect-video bg-surface-container-lowest border border-white/10 rounded flex flex-col items-center justify-center gap-6 p-6 overflow-hidden">
+        <img alt="Marketing Summer School 2026" src="images/mk-summer-school-logo.png" class="h-2/5 w-auto object-contain">
+        <div class="flex items-center justify-center gap-6">
+          <img alt="ASE logo" src="images/partner-logo-ase.png" class="h-9 md:h-11 w-auto object-contain opacity-90">
+          <img alt="mk est. 2003 logo" src="images/partner-logo-mk-est2003.png" class="h-9 md:h-11 w-auto object-contain opacity-90">
+          <img alt="Asociatia de Marketing a Studentilor din Romania logo" src="images/partner-logo-ama.png" class="h-9 md:h-11 w-auto object-contain opacity-90">
+        </div>
+      </div>
       <div class="project-metadata flex justify-between items-end">
         <div>
-          <h2 class="font-headline-md text-headline-md text-primary mb-2">Blue Hour Narrative</h2>
-          <p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Director of Photography</p>
+          <h2 class="font-headline-md text-headline-md text-primary mb-2">Marketing Summer School 2026</h2>
+          <p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Event Branding &amp; Visual Identity</p>
         </div>
       </div>
     </article>
@@ -128,16 +135,21 @@
 <main class="md:hidden pt-20 w-full px-margin-mobile py-margin-mobile">
   <div class="masonry-col">
     <article class="masonry-item relative group overflow-hidden bg-surface-container rounded-DEFAULT border border-white/10 cursor-pointer">
-      <div class="aspect-[9/16] w-full overflow-hidden">
-        <img alt="Blue Hour Narrative" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform ease-out duration-700" src="images/blue-hour.jpg">
+      <div class="aspect-[3/4] w-full overflow-hidden bg-surface-container-lowest flex flex-col items-center justify-center gap-4 p-6">
+        <img alt="Marketing Summer School 2026" src="images/mk-summer-school-logo.png" class="h-20 w-auto object-contain">
+        <div class="flex items-center justify-center gap-4">
+          <img alt="ASE logo" src="images/partner-logo-ase.png" class="h-7 w-auto object-contain opacity-90">
+          <img alt="mk est. 2003 logo" src="images/partner-logo-mk-est2003.png" class="h-7 w-auto object-contain opacity-90">
+          <img alt="AMA logo" src="images/partner-logo-ama.png" class="h-7 w-auto object-contain opacity-90">
+        </div>
       </div>
       <div class="absolute inset-0 bg-gradient-to-t from-surface/95 via-surface/30 to-transparent flex flex-col justify-end p-6">
-        <span class="font-label-caps text-label-caps text-primary/70 mb-2">DIRECTOR OF PHOTOGRAPHY</span>
-        <h2 class="font-headline-md text-headline-md text-primary">Blue Hour Narrative</h2>
+        <span class="font-label-caps text-label-caps text-primary/70 mb-2">EVENT BRANDING</span>
+        <h2 class="font-headline-md text-headline-md text-primary">Marketing Summer School 2026</h2>
       </div>
     </article>
     <article class="masonry-item relative group overflow-hidden bg-surface-container rounded-DEFAULT border border-white/10 cursor-pointer">
-      <div class="aspect-[9/16] w-full overflow-hidden">
+      <div class="aspect-[3/4] w-full overflow-hidden">
         <img alt="Tech Unleashed" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform ease-out duration-700" src="images/tech.jpg">
       </div>
       <div class="absolute inset-0 bg-gradient-to-t from-surface/95 via-surface/30 to-transparent flex flex-col justify-end p-6">
@@ -146,7 +158,7 @@
       </div>
     </article>
     <article class="masonry-item relative group overflow-hidden bg-surface-container rounded-DEFAULT border border-white/10 cursor-pointer">
-      <div class="aspect-[9/16] w-full overflow-hidden">
+      <div class="aspect-[3/4] w-full overflow-hidden">
         <img alt="Modern Echoes" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform ease-out duration-700" src="images/modern-echoes.jpg">
       </div>
       <div class="absolute inset-0 bg-gradient-to-t from-surface/95 via-surface/30 to-transparent flex flex-col justify-end p-6">
@@ -155,7 +167,7 @@
       </div>
     </article>
     <article class="masonry-item relative group overflow-hidden bg-surface-container rounded-DEFAULT border border-white/10 cursor-pointer">
-      <div class="aspect-[9/16] w-full overflow-hidden">
+      <div class="aspect-[3/4] w-full overflow-hidden">
         <img alt="Misty Peaks" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform ease-out duration-700" src="images/misty-peaks.jpg">
       </div>
       <div class="absolute inset-0 bg-gradient-to-t from-surface/95 via-surface/30 to-transparent flex flex-col justify-end p-6">
