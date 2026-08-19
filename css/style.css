@@ -72,6 +72,36 @@ body {
     color: #c4c7c8;
 }
 
+/* ---------- Work page background reels ---------- */
+.bg-reels {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #131313;
+}
+.bg-reels-col {
+    flex: 1 1 33.333%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.bg-reels-col video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(6px);
+    transform: scale(1.1);
+}
+.bg-reels-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(19, 19, 19, 0.55);
+}
+
 /* ---------- Shared animations ---------- */
 @keyframes fadeIn {
     from { opacity: 0; }
