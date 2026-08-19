@@ -5,51 +5,116 @@ body {
     color: #FFFFFF;
 }
 
-/* ---------- Desktop project cards (Work page) ---------- */
-.project-card {
-    overflow: hidden;
-    position: relative;
-    background-color: #1A1A1A;
-    padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+/* ---------- Work grid (uniform 16:9 cards) ---------- */
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
 }
-.project-image-wrapper {
-    overflow: hidden;
+@media (min-width: 640px) {
+    .work-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+    .work-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.work-card {
     position: relative;
+    display: block;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 */
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #1A1A1A;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
 }
-.project-image-wrapper img {
+.work-card-img {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 0.35s ease-out;
 }
-.project-card:hover .project-image-wrapper img {
-    transform: scale(1.05);
+.work-card:hover .work-card-img,
+.work-card:focus-visible .work-card-img {
+    transform: scale(1.08);
 }
-.project-metadata {
+.work-card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.4) 45%, transparent 75%);
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-    margin-top: 24px;
+    transition: opacity 0.3s ease-out;
 }
-.project-card:hover .project-metadata {
+.work-card:hover .work-card-overlay,
+.work-card:focus-visible .work-card-overlay {
+    opacity: 1;
+}
+.work-card-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.35s ease-out 0.05s, transform 0.35s ease-out 0.05s;
+}
+.work-card-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 6px;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.35s ease-out 0.1s, transform 0.35s ease-out 0.1s;
+}
+.work-card:hover .work-card-tag,
+.work-card:hover .work-card-title,
+.work-card:focus-visible .work-card-tag,
+.work-card:focus-visible .work-card-title {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* ---------- Mobile masonry (Work page) ---------- */
-.masonry-col {
-    column-count: 1;
-    column-gap: 24px;
+.work-card-play {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
-.masonry-item {
-    break-inside: avoid;
-    margin-bottom: 24px;
+.work-card:hover .work-card-play,
+.work-card:focus-visible .work-card-play {
+    opacity: 1;
+    transform: scale(1);
+}
+/* Touch devices have no hover — keep title/tag legible without it */
+@media (hover: none) {
+    .work-card-overlay,
+    .work-card-tag,
+    .work-card-title,
+    .work-card-play {
+        opacity: 1;
+        transform: none;
+    }
+    .work-card-img {
+        transform: none !important;
+    }
 }
 
 /* ---------- Contact form underline inputs ---------- */
