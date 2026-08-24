@@ -350,6 +350,9 @@ body {
     justify-content: center;
     padding: 20px;
 }
+.project-partner-logo.is-large {
+    padding: 0;
+}
 .project-partner-logo img {
     max-width: 100%;
     max-height: 100%;
