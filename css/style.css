@@ -353,6 +353,17 @@ body {
 .project-partner-logo.is-large {
     padding: 0;
 }
+.project-partner-logo.is-xlarge {
+    padding: 0;
+    overflow: visible;
+}
+.project-partner-logo.is-xlarge img {
+    max-width: 140%;
+    max-height: 140%;
+}
+.project-partner-logo.is-small {
+    padding: 40px;
+}
 .project-partner-logo img {
     max-width: 100%;
     max-height: 100%;
