@@ -16,6 +16,8 @@ body {
 }
 @media (min-width: 1024px) {
     .work-grid { grid-template-columns: repeat(3, 1fr); }
+    /* lone 4th card on row 2: center it under the first 3 */
+    .work-card:nth-child(4):nth-last-child(1) { grid-column: 2; }
 }
 .work-card {
     position: relative;
