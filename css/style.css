@@ -348,8 +348,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
-    border-radius: 8px;
     padding: 20px;
 }
 .project-partner-logo img {
