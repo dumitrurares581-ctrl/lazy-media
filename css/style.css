@@ -270,6 +270,11 @@ body {
     gap: 32px;
     margin-bottom: 80px;
 }
+.project-videos.is-vertical {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+}
 .project-video {
     width: 100%;
     display: block;
