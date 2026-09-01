@@ -283,6 +283,9 @@ body {
     background-color: #1A1A1A;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
+.project-video.is-wide {
+    grid-column: 1 / -1;
+}
 .project-video video {
     width: 100%;
     height: auto;
