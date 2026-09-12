@@ -329,6 +329,23 @@ body {
 @media (min-width: 768px) {
     .project-title { font-size: 56px; }
 }
+.project-hero-avatar {
+    position: absolute;
+    z-index: 1;
+    top: 96px;
+    right: 16px;
+    width: 96px;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+}
+@media (min-width: 768px) {
+    .project-hero-avatar {
+        top: 120px;
+        right: 80px;
+        width: 160px;
+    }
+}
 
 .project-body {
     max-width: 1100px;

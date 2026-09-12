@@ -54,12 +54,13 @@
 </script>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-background text-primary antialiased font-body-md text-body-md selection:bg-surface-variant selection:text-primary">
+<body class="bg-black text-primary antialiased font-body-md text-body-md selection:bg-surface-variant selection:text-primary">
 
-<!-- Background reel (fixed, full-page blurred video) -->
-<div class="bg-reels" aria-hidden="true">
-  <video src="videos/bg-main.mp4" autoplay muted loop playsinline></video>
-  <div class="bg-reels-overlay"></div>
+<!-- Background (fixed, animated black liquid gradient) -->
+<div class="bg-liquid" aria-hidden="true">
+  <div class="bg-liquid-blob bg-liquid-blob-1"></div>
+  <div class="bg-liquid-blob bg-liquid-blob-2"></div>
+  <div class="bg-liquid-blob bg-liquid-blob-3"></div>
 </div>
 
 <!-- Desktop nav -->
@@ -88,6 +89,7 @@
 <section class="project-hero">
   <img class="project-hero-bg" src="images/coachmky.png" alt="">
   <div class="project-hero-overlay"></div>
+  <img class="project-hero-avatar" src="images/avatar-cu-controler.png" alt="" aria-hidden="true">
   <div class="project-hero-inner">
     <a class="project-back" href="index.html">&larr; My Work</a>
     <span class="project-tag">Social Media Growth</span>
