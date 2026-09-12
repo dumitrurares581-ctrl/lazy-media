@@ -10,18 +10,4 @@ document.addEventListener('DOMContentLoaded', function () {
       menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
-
-  // Contact form: client-side only (no backend wired up yet).
-  var form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var status = document.getElementById('form-status');
-      if (status) {
-        status.textContent = 'Thanks — message received. We\'ll get back to you soon.';
-        status.classList.remove('hidden');
-      }
-      form.reset();
-    });
-  }
 });
