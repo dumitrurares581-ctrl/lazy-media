@@ -578,7 +578,11 @@ body {
     padding: 40px;
 }
 .project-partner-logo.is-compact {
-    padding: 44px;
+    padding: 20px;
+}
+.project-partner-logo.is-compact img {
+    max-height: 56px;
+    width: auto;
 }
 .project-partner-logo img {
     max-width: 100%;
