@@ -188,6 +188,62 @@ body {
     background: rgba(19, 19, 19, 0.55);
 }
 
+/* ---------- Homepage background (animated black liquid gradient) ---------- */
+.bg-liquid {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    background: #050505;
+}
+.bg-liquid-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.28;
+    mix-blend-mode: screen;
+    will-change: transform;
+}
+.bg-liquid-blob-1 {
+    width: 55vw;
+    height: 55vw;
+    top: -15%;
+    left: -15%;
+    background: radial-gradient(circle, #4ce346, transparent 70%);
+    animation: liquidMove1 22s ease-in-out infinite alternate;
+}
+.bg-liquid-blob-2 {
+    width: 50vw;
+    height: 50vw;
+    bottom: -20%;
+    right: -10%;
+    background: radial-gradient(circle, #3a3939, transparent 70%);
+    animation: liquidMove2 26s ease-in-out infinite alternate;
+}
+.bg-liquid-blob-3 {
+    width: 40vw;
+    height: 40vw;
+    top: 30%;
+    left: 35%;
+    background: radial-gradient(circle, #04b71a, transparent 70%);
+    animation: liquidMove3 30s ease-in-out infinite alternate;
+}
+@keyframes liquidMove1 {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(10vw, 12vh) scale(1.15); }
+}
+@keyframes liquidMove2 {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(-12vw, -8vh) scale(1.1); }
+}
+@keyframes liquidMove3 {
+    from { transform: translate(0, 0) scale(1); }
+    to { transform: translate(-8vw, 10vh) scale(0.9); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .bg-liquid-blob { animation: none; }
+}
+
 /* ---------- Shared animations ---------- */
 @keyframes fadeIn {
     from { opacity: 0; }
