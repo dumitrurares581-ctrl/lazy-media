@@ -49,12 +49,12 @@ body {
         display: flex;
         align-items: center;
         position: absolute;
-        inset: -30% -5%;
+        inset: -45% -5%;
         z-index: 0;
         overflow: hidden;
         pointer-events: none;
-        -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 15%, black 85%, transparent 100%);
-        mask-image: linear-gradient(90deg, transparent 0%, black 15%, black 85%, transparent 100%);
+        -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+        mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
     }
 }
 .work-row-ghost-track {
@@ -69,10 +69,10 @@ body {
 }
 .work-row-ghost-copy {
     display: inline-block;
-    height: clamp(80px, 11vw, 200px);
+    height: clamp(110px, 15vw, 280px);
     width: auto;
-    padding-right: 90px;
-    opacity: 0.32;
+    padding-right: 100px;
+    opacity: 0.55;
 }
 @keyframes ghostScroll {
     from { transform: translateX(0); }
