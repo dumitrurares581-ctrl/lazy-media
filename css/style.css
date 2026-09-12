@@ -33,15 +33,15 @@ body {
 }
 @media (min-width: 768px) {
     .work-row-avatar {
-        width: 40%;
+        width: 58%;
     }
     .work-row .work-card {
-        width: 60%;
+        width: 42%;
     }
 }
 .work-row-avatar img {
     width: 100%;
-    max-width: 280px;
+    max-width: 420px;
     height: auto;
     object-fit: contain;
 }
