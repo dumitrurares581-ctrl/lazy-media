@@ -68,21 +68,22 @@ body {
     animation-direction: reverse;
 }
 .work-row-ghost-copy {
-    display: inline-flex;
-    align-items: center;
-    padding-right: 90px;
-}
-.ghost-letter {
-    height: clamp(48px, 6vw, 110px);
-    width: auto;
-    display: block;
-    margin-right: 2px;
-    filter: drop-shadow(3px 6px 8px rgba(0, 0, 0, 0.45));
-}
-.ghost-space {
     display: inline-block;
-    width: clamp(20px, 3vw, 40px);
-    flex-shrink: 0;
+    padding-right: 90px;
+    font-size: clamp(56px, 8vw, 140px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.16);
+    text-shadow:
+        1px 1px 0 rgba(0, 0, 0, 0.3),
+        2px 2px 0 rgba(0, 0, 0, 0.26),
+        3px 3px 0 rgba(0, 0, 0, 0.22),
+        4px 4px 0 rgba(0, 0, 0, 0.18),
+        5px 5px 0 rgba(0, 0, 0, 0.14),
+        6px 6px 0 rgba(0, 0, 0, 0.1),
+        7px 7px 0 rgba(0, 0, 0, 0.06),
+        8px 8px 10px rgba(0, 0, 0, 0.4);
 }
 @keyframes ghostScroll {
     from { transform: translateX(0); }
