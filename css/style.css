@@ -41,25 +41,56 @@ body {
         flex-direction: row-reverse;
     }
 }
-.work-row-ghost {
+.work-row-ghost-wrap {
     display: none;
 }
 @media (min-width: 1024px) {
-    .work-row-ghost {
+    .work-row-ghost-wrap {
         display: block;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        inset: -30% -5%;
         z-index: 0;
-        font-size: clamp(56px, 8vw, 140px);
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        line-height: 1;
-        color: rgba(255, 255, 255, 0.045);
-        white-space: nowrap;
+        overflow: hidden;
         pointer-events: none;
-        user-select: none;
+        -webkit-mask-image: linear-gradient(100deg, transparent 0%, black 22%, black 78%, transparent 100%);
+        mask-image: linear-gradient(100deg, transparent 0%, black 22%, black 78%, transparent 100%);
+    }
+}
+.work-row-ghost {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: clamp(56px, 8vw, 140px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.05);
+    text-shadow:
+        1px 1px 0 rgba(255, 255, 255, 0.045),
+        2px 2px 0 rgba(255, 255, 255, 0.04),
+        3px 3px 0 rgba(255, 255, 255, 0.035),
+        4px 4px 0 rgba(255, 255, 255, 0.03),
+        5px 5px 0 rgba(255, 255, 255, 0.025),
+        6px 6px 0 rgba(255, 255, 255, 0.02),
+        7px 7px 0 rgba(255, 255, 255, 0.015),
+        8px 8px 0 rgba(255, 255, 255, 0.01);
+    white-space: nowrap;
+    user-select: none;
+    animation: ghostDrift 20s linear infinite;
+    will-change: transform;
+}
+.work-row.is-reversed .work-row-ghost {
+    animation-direction: reverse;
+}
+@keyframes ghostDrift {
+    from { transform: translateX(-35vw) translateY(-50%) rotate(-12deg); }
+    to   { transform: translateX(65vw) translateY(-50%) rotate(-12deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .work-row-ghost {
+        animation: none;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(-12deg);
     }
 }
 .work-row-avatar {
