@@ -591,11 +591,6 @@ body {
     object-fit: contain;
 }
 
-/* ---------- Footer ---------- */
-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
 /* ---------- Mobile nav dropdown ---------- */
 #mobile-menu {
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
