@@ -10,4 +10,20 @@ document.addEventListener('DOMContentLoaded', function () {
       menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   }
+
+  // Work rows: reveal each row once as it scrolls into view.
+  var rows = document.querySelectorAll('.work-row');
+  if (rows.length && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    rows.forEach(function (row) { observer.observe(row); });
+  } else {
+    rows.forEach(function (row) { row.classList.add('is-visible'); });
+  }
 });
