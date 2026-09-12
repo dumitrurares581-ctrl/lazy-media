@@ -570,14 +570,6 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #1c1b1b;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 8px;
-    transition: border-color 0.3s ease-out, background-color 0.3s ease-out;
-}
-.project-partner-logo:hover {
-    border-color: rgba(255, 255, 255, 0.25);
-    background-color: #201f1f;
 }
 .project-partner-logo.is-large {
     padding: 0;
